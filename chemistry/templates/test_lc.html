@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Test
+{% endblock %}
+
+{% block main %}
+    <form action="/test_lc" method="post" class="text-left">
+        <div class="mb-3">
+            <h3>{{question}}</h3>
+            {% for option in ans, option2, option3 %}
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="options" value={{option}}>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    {{option}}
+                    </label>
+                </div>
+            {% endfor %}
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

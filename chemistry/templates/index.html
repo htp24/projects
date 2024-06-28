@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1 class="text-center">Homepage</h1>
+    <img src="{{ url_for('static', filename='PictureName.jpg') }}" class="border img-fluid">
+{% endblock %}
